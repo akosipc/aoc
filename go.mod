@@ -1,3 +1,3 @@
-module sonar_sweep
+module aoc
 
 go 1.17
