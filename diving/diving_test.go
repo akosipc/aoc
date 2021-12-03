@@ -17,7 +17,15 @@ func TestDivingBasic(t *testing.T) {
 
 	ans := divingPos(input)
 
-	if ans != 150 {
+	if ans != 900 {
 		t.Errorf("divingPos() = %d; want 900", ans)
+	}
+}
+
+func BenchmarkDivingBasic(b *testing.B) {
+	input := []string{"forward 5", "down 5", "forward 8", "up 3", "down 8", "forward 2"}
+
+	for i := 0; i < b.N; i++ {
+		divingPos(input)
 	}
 }
